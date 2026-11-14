@@ -1,0 +1,503 @@
+<!-- ===================================================================
+     BUKU TAMU MASJID AGUNG IBNU BATUTAH - FRONTEND BLOGGER
+     Tempel seluruh kode ini ke Laman/Postingan Blogger (mode HTML).
+     =================================================================== -->
+
+<!-- Thumbnail postingan Blogger (tersembunyi, dibaca Blogger sebagai gambar utama) -->
+<div style="display:none;height:0;overflow:hidden"><img src="https://drive.google.com/thumbnail?id=1sPYGlXXUyFFPnT9m1D9t0E8Zs2tVOkO6&amp;sz=w600" alt="Buku Tamu Masjid Agung Ibnu Batutah" width="600" height="600"/></div>
+
+<div id="ibt-app" role="main"></div>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+<style>
+#ibt-app{--g:#047857;--gd:#065f46;--gs:#ecfdf5;--bg:#f8fafc;--tx:#0f172a;--mu:#64748b;--bd:#e2e8f0;--rd:#dc2626;
+position:fixed;top:0;left:0;right:0;bottom:0;z-index:2147483647;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;
+background:var(--bg);color:var(--tx);font-family:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;font-size:16px;line-height:1.5;text-align:left}
+#ibt-app *,#ibt-app *::before,#ibt-app *::after{box-sizing:border-box}
+#ibt-app h1,#ibt-app h2,#ibt-app h3,#ibt-app p{margin:0;padding:0;font-family:inherit}
+#ibt-app .wrap{max-width:520px;margin:0 auto;padding:20px 16px 36px}
+#ibt-app .wrap.wide{max-width:1040px}
+#ibt-app .brand{display:flex;align-items:center;gap:14px;margin-bottom:20px}
+#ibt-app .logo{width:56px;height:56px;border-radius:14px;object-fit:contain;background:#fff;border:1px solid var(--bd);padding:4px;flex-shrink:0}
+#ibt-app .brand small{display:block;color:var(--mu);font-size:13px;font-weight:500}
+#ibt-app .brand h1{font-size:19px;font-weight:700;line-height:1.25;color:var(--tx)}
+#ibt-app .card{background:#fff;border:1px solid var(--bd);border-radius:20px;padding:22px;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.04)}
+#ibt-app .card h2{font-size:18px;font-weight:700;margin-bottom:4px;color:var(--tx)}
+#ibt-app .sub{color:var(--mu);font-size:14px;margin-bottom:18px}
+#ibt-app .field{margin-bottom:14px}
+#ibt-app label{display:block;font-size:13px;font-weight:600;margin:0 0 6px;color:var(--tx)}
+#ibt-app input,#ibt-app textarea{display:block;width:100%;height:48px;padding:0 14px;margin:0;border:1px solid var(--bd);border-radius:12px;background:#fff;font:inherit;font-size:16px;color:var(--tx);outline:none;box-shadow:none;-webkit-appearance:none;appearance:none}
+#ibt-app textarea{height:auto;min-height:84px;padding:12px 14px;resize:vertical}
+#ibt-app input:focus,#ibt-app textarea:focus{border-color:var(--g);box-shadow:0 0 0 3px rgba(4,120,87,.15)}
+#ibt-app input.bad,#ibt-app textarea.bad{border-color:var(--rd)}
+#ibt-app .err{color:var(--rd);font-size:12px;margin-top:4px;min-height:0}
+#ibt-app .hint{color:var(--mu);font-size:12px;margin-top:4px}
+#ibt-app .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#ibt-app .pre{position:relative}
+#ibt-app .pre span{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mu);font-size:15px;font-weight:600;pointer-events:none}
+#ibt-app .pre input{padding-left:44px}
+#ibt-app .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;width:100%;height:50px;padding:0 18px;margin:0;border:1px solid transparent;border-radius:12px;background:var(--g);color:#fff;font:inherit;font-size:16px;font-weight:600;cursor:pointer;text-decoration:none;transition:background .15s,transform .05s}
+#ibt-app .btn:hover{background:var(--gd)}
+#ibt-app .btn:active{transform:scale(.99)}
+#ibt-app .btn:disabled{opacity:.6;cursor:not-allowed}
+#ibt-app .btn.ghost{background:#fff;color:var(--g);border-color:var(--bd)}
+#ibt-app .btn.ghost:hover{background:var(--gs)}
+#ibt-app .btn.sm{width:auto;height:40px;padding:0 14px;font-size:14px}
+#ibt-app .btn.danger{background:#fff;color:var(--rd);border-color:#fecaca}
+#ibt-app .btn.danger:hover{background:#fef2f2}
+#ibt-app .linkbtn{background:none;border:0;padding:6px;margin:0;color:var(--mu);font:inherit;font-size:13px;text-decoration:underline;cursor:pointer}
+#ibt-app .foot{text-align:center;margin-top:18px;color:var(--mu);font-size:13px}
+#ibt-app .banner{background:#fffbeb;border:1px solid #fde68a;color:#92400e;border-radius:12px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+#ibt-app .alert{background:#fef2f2;border:1px solid #fecaca;color:#991b1b;border-radius:12px;padding:10px 14px;font-size:14px;margin-bottom:14px}
+#ibt-app .center{text-align:center}
+#ibt-app .check{width:68px;height:68px;margin:4px auto 14px;border-radius:50%;background:var(--gs);color:var(--g);display:flex;align-items:center;justify-content:center}
+#ibt-app .thanks h2{font-size:21px;margin-bottom:8px}
+#ibt-app .thanks p{color:#334155;font-size:15px}
+#ibt-app .donate{margin-top:20px;background:var(--gs);border:1px solid #a7f3d0;border-radius:16px;padding:18px;text-align:center}
+#ibt-app .donate h3{font-size:16px;font-weight:700;color:var(--gd);margin-bottom:6px}
+#ibt-app .donate p{font-size:14px;color:#065f46}
+#ibt-app .bank{margin:14px 0 4px;font-size:13px;color:var(--mu);font-weight:500}
+#ibt-app .rek{font-size:28px;font-weight:700;letter-spacing:1.5px;color:var(--tx);line-height:1.2}
+#ibt-app .an{font-size:14px;font-weight:600;color:var(--tx);margin:2px 0 14px}
+#ibt-app .gap{height:10px}
+#ibt-app .top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+#ibt-app .top .brand{margin:0}
+#ibt-app .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:16px}
+#ibt-app .stat{background:#fff;border:1px solid var(--bd);border-radius:16px;padding:14px 16px}
+#ibt-app .stat small{display:block;color:var(--mu);font-size:12px;font-weight:500}
+#ibt-app .stat b{display:block;font-size:22px;font-weight:700;margin-top:2px}
+#ibt-app .toolbar{display:grid;grid-template-columns:2fr 1fr 1fr auto auto;gap:10px;margin-bottom:14px;align-items:end}
+#ibt-app .toolbar input{height:42px;font-size:15px}
+#ibt-app .toolbar label{font-size:12px;color:var(--mu);font-weight:500}
+#ibt-app .tblwrap{background:#fff;border:1px solid var(--bd);border-radius:16px;overflow:hidden}
+#ibt-app table.tbl{width:100%;border-collapse:collapse;font-size:14px;margin:0;border:0}
+#ibt-app .tbl th{background:#f1f5f9;text-align:left;font-weight:600;font-size:12px;color:var(--mu);padding:10px 14px;border:0;white-space:nowrap}
+#ibt-app .tbl td{padding:12px 14px;border:0;border-top:1px solid var(--bd);vertical-align:top;color:var(--tx)}
+#ibt-app .tbl a{color:var(--g);text-decoration:none;font-weight:500}
+#ibt-app .tbl td.num,#ibt-app .tbl th.num{text-align:right}
+#ibt-app .empty{padding:36px 16px;text-align:center;color:var(--mu);font-size:14px}
+#ibt-app .spin{width:22px;height:22px;border:3px solid #d1fae5;border-top-color:var(--g);border-radius:50%;animation:ibtspin .7s linear infinite;margin:0 auto}
+#ibt-app .btn .spin{width:18px;height:18px;border-width:2px;border-color:rgba(255,255,255,.4);border-top-color:#fff;margin:0}
+@keyframes ibtspin{to{transform:rotate(360deg)}}
+#ibt-app .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%) translateY(20px);background:#0f172a;color:#fff;padding:10px 18px;border-radius:999px;font-size:14px;opacity:0;pointer-events:none;transition:all .25s;z-index:5;max-width:90vw;text-align:center}
+#ibt-app .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+@media(max-width:900px){#ibt-app .toolbar{grid-template-columns:1fr 1fr}#ibt-app .toolbar .full{grid-column:1/-1}}
+@media(max-width:480px){#ibt-app .row2{grid-template-columns:1fr}#ibt-app .card{padding:18px}#ibt-app .rek{font-size:24px}}
+@media(max-width:700px){
+ #ibt-app .tblwrap{background:none;border:0;border-radius:0;overflow:visible}
+ #ibt-app .tbl thead{display:none}
+ #ibt-app .tbl,#ibt-app .tbl tbody,#ibt-app .tbl tr,#ibt-app .tbl td{display:block;width:100%}
+ #ibt-app .tbl tr{background:#fff;border:1px solid var(--bd);border-radius:14px;padding:10px 14px;margin-bottom:10px}
+ #ibt-app .tbl td{display:flex;justify-content:space-between;gap:14px;padding:6px 0;border:0;text-align:right}
+ #ibt-app .tbl td::before{content:attr(data-label);color:var(--mu);font-weight:500;text-align:left;flex-shrink:0}
+ #ibt-app .tbl td.act{justify-content:flex-end;padding-top:10px}
+ #ibt-app .tbl td.act::before{content:none}
+}
+</style>
+
+<script>
+// =====================================================================
+// KONFIGURASI APLIKASI
+// UBAH IS_PREVIEW KE false JIKA AKAN DI-DEPLOY KE BLOGGER
+const IS_PREVIEW = false; // Set default true untuk Canvas
+const GAS_URL = "https://script.google.com/macros/s/AKfycbyvLJZ2R8kOewFQgAVyoarB08b2UNrQdQlLoS36-MgvtAy8wNRIt113bK0Hsj_timFp/exec";
+// =====================================================================
+
+const LOGO_ID = "1sPYGlXXUyFFPnT9m1D9t0E8Zs2tVOkO6";
+const LOGO_URL = "https://drive.google.com/thumbnail?id=" + LOGO_ID + "&sz=w256";
+const ICON_URL = "https://drive.google.com/thumbnail?id=" + LOGO_ID + "&sz=w192";
+const MASJID = "Masjid Agung Ibnu Batutah";
+const REKENING = { bank: "BSI (Bank Syariah Indonesia)", nomor: "8378899101", nama: "Yayasan Masjid Agung Ibnu Batutah" };
+
+(function () {
+  'use strict';
+
+  // ---------- Util ----------
+  var root = document.getElementById('ibt-app');
+  function $(s, r) { return (r || root).querySelector(s); }
+  function esc(s) {
+    return String(s == null ? '' : s).replace(/[&<>"']/g, function (c) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+    });
+  }
+  function rupiah(n) { return 'Rp ' + Number(n || 0).toLocaleString('id-ID'); }
+  function pad(n) { return String(n).padStart(2, '0'); }
+  function todayStr() { var d = new Date(); return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); }
+  function fmtDate(s) {
+    var m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(s || '');
+    if (!m) return s || '';
+    var b = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'];
+    return Number(m[3]) + ' ' + b[Number(m[2]) - 1] + ' ' + m[1];
+  }
+  var store = {
+    get: function (k) { try { return sessionStorage.getItem(k); } catch (e) { return null; } },
+    set: function (k, v) { try { sessionStorage.setItem(k, v); } catch (e) {} },
+    del: function (k) { try { sessionStorage.removeItem(k); } catch (e) {} }
+  };
+  var toastTimer;
+  function toast(msg) {
+    var t = $('.toast');
+    if (!t) { t = document.createElement('div'); t.className = 'toast'; root.appendChild(t); }
+    t.textContent = msg; t.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove('show'); }, 2400);
+  }
+  function setIcons() {
+    try {
+      var old = document.querySelectorAll('link[rel="icon"],link[rel="shortcut icon"],link[rel="apple-touch-icon"]');
+      for (var i = 0; i < old.length; i++) old[i].parentNode.removeChild(old[i]);
+      ['icon', 'apple-touch-icon'].forEach(function (rel) {
+        var l = document.createElement('link'); l.rel = rel; l.href = ICON_URL;
+        document.head.appendChild(l);
+      });
+      document.title = 'Buku Tamu - ' + MASJID;
+      var meta = document.createElement('meta'); meta.name = 'theme-color'; meta.content = '#047857';
+      document.head.appendChild(meta);
+    } catch (e) {}
+  }
+  function normalizeWA(v) {
+    var d = String(v || '').replace(/\D/g, '');
+    if (d.indexOf('62') === 0) return d;
+    if (d.indexOf('0') === 0) return '62' + d.slice(1);
+    if (d.indexOf('8') === 0) return '62' + d;
+    return d;
+  }
+
+  // ---------- Data dummy (Mode Preview) ----------
+  var dummy = [
+    { id: 'D0001', timestamp: '2026-11-14 08:15:00', tanggal: '2026-11-14', nama: 'Ahmad Fauzi', alamat: 'Surabaya, Jawa Timur', bus: 2, infaq: 500000, wa: '6281234567890' },
+    { id: 'D0002', timestamp: '2026-11-13 10:40:00', tanggal: '2026-11-13', nama: 'Siti Rahmawati', alamat: 'Malang, Jawa Timur', bus: 1, infaq: 250000, wa: '6285712345678' },
+    { id: 'D0003', timestamp: '2026-11-12 13:05:00', tanggal: '2026-11-12', nama: 'H. Budi Santoso', alamat: 'Denpasar, Bali', bus: 3, infaq: 1500000, wa: '6281311122233' },
+    { id: 'D0004', timestamp: '2026-11-10 09:20:00', tanggal: '2026-11-10', nama: 'Dewi Lestari', alamat: 'Bandung, Jawa Barat', bus: 0, infaq: 100000, wa: '6282198765432' },
+    { id: 'D0005', timestamp: '2026-11-08 15:30:00', tanggal: '2026-11-08', nama: 'Rombongan Majelis Taklim An-Nur', alamat: 'Yogyakarta', bus: 4, infaq: 2000000, wa: '6281999888777' }
+  ];
+
+  function mockApi(action, d) {
+    return new Promise(function (resolve) {
+      setTimeout(function () {
+        if (action === 'submit') {
+          dummy.unshift({ id: 'D' + Date.now(), timestamp: todayStr() + ' 00:00:00', tanggal: d.tanggal, nama: d.nama, alamat: d.alamat, bus: d.bus, infaq: d.infaq, wa: d.wa });
+          return resolve({ ok: true });
+        }
+        if (action === 'login') {
+          if (String(d.username || '').trim().toLowerCase() === 'admin' && d.password === 'edudigital')
+            return resolve({ ok: true, token: 'preview-token', nama: 'Administrator', role: 'Admin' });
+          return resolve({ ok: false, message: 'Username atau password salah.' });
+        }
+        if (d.token !== 'preview-token') return resolve({ ok: false, code: 'AUTH', message: 'Sesi berakhir. Silakan login kembali.' });
+        if (action === 'list') return resolve({ ok: true, data: dummy.slice() });
+        if (action === 'delete') {
+          dummy = dummy.filter(function (g) { return g.id !== d.id; });
+          return resolve({ ok: true });
+        }
+        if (action === 'logout') return resolve({ ok: true });
+        resolve({ ok: false, message: 'Aksi tidak dikenal.' });
+      }, 450);
+    });
+  }
+
+  // ---------- Lapisan API ----------
+  function api(action, data) {
+    data = data || {};
+    if (IS_PREVIEW) return mockApi(action, data);
+    var body = { action: action };
+    for (var k in data) body[k] = data[k];
+    return fetch(GAS_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+      body: JSON.stringify(body)
+    }).then(function (r) {
+      if (!r.ok) throw new Error('Server error ' + r.status);
+      return r.json();
+    });
+  }
+
+  // ---------- Tampilan umum ----------
+  function brandHtml() {
+    return '<div class="brand"><img class="logo" src="' + LOGO_URL + '" alt="Logo ' + MASJID + '" onerror="this.style.visibility=\'hidden\'">' +
+      '<div><small>Buku Tamu</small><h1>' + MASJID + '</h1></div></div>';
+  }
+  function previewBanner() {
+    return IS_PREVIEW ? '<div class="banner"><b>Mode Preview</b> - data contoh, tidak tersimpan. Login admin: <b>admin</b> / <b>edudigital</b></div>' : '';
+  }
+  function setErr(id, msg) {
+    var e = $('#e-' + id), i = $('#' + id);
+    if (e) e.textContent = msg || '';
+    if (i) { if (msg) i.classList.add('bad'); else i.classList.remove('bad'); }
+  }
+
+  // ---------- View: Form ----------
+  function viewForm() {
+    root.scrollTop = 0;
+    root.innerHTML =
+      '<div class="wrap">' + previewBanner() + brandHtml() +
+      '<div class="card"><h2>Isi Buku Tamu</h2>' +
+      '<p class="sub">Silakan lengkapi data kunjungan Anda. Kolom bertanda * wajib diisi.</p>' +
+      '<form id="f" novalidate>' +
+      '<div class="field"><label for="tgl">Tanggal Kunjungan *</label><input id="tgl" type="date"><div class="err" id="e-tgl"></div></div>' +
+      '<div class="field"><label for="nama">Nama *</label><input id="nama" type="text" maxlength="100" autocomplete="name" placeholder="Nama lengkap / nama rombongan"><div class="err" id="e-nama"></div></div>' +
+      '<div class="field"><label for="alamat">Alamat *</label><textarea id="alamat" maxlength="300" autocomplete="street-address" placeholder="Kota / kabupaten, provinsi"></textarea><div class="err" id="e-alamat"></div></div>' +
+      '<div class="row2">' +
+      '<div class="field"><label for="bus">Jumlah Bus</label><input id="bus" type="text" inputmode="numeric" maxlength="3" placeholder="0" value="0"><div class="err" id="e-bus"></div></div>' +
+      '<div class="field"><label for="infaq">Jumlah Infaq</label><div class="pre"><span>Rp</span><input id="infaq" type="text" inputmode="numeric" maxlength="14" placeholder="0"></div><div class="err" id="e-infaq"></div></div>' +
+      '</div>' +
+      '<div class="field"><label for="wa">Nomor WhatsApp *</label><input id="wa" type="tel" inputmode="tel" maxlength="20" autocomplete="tel" placeholder="08xxxxxxxxxx"><div class="err" id="e-wa"></div></div>' +
+      '<div class="alert" id="formErr" style="display:none"></div>' +
+      '<button class="btn" id="btnSubmit" type="submit">Kirim</button>' +
+      '</form></div>' +
+      '<div class="foot">' + MASJID + '<br><button class="linkbtn" id="toLogin" type="button">Login Admin</button></div>' +
+      '</div>';
+
+    $('#tgl').value = todayStr();
+    $('#bus').addEventListener('input', function (e) { e.target.value = e.target.value.replace(/\D/g, '').slice(0, 3); });
+    $('#infaq').addEventListener('input', function (e) {
+      var d = e.target.value.replace(/\D/g, '').slice(0, 12);
+      e.target.value = d ? Number(d).toLocaleString('id-ID') : '';
+    });
+    $('#toLogin').addEventListener('click', function () { store.get('ibt_token') ? viewAdmin() : viewLogin(); });
+    $('#f').addEventListener('submit', onSubmit);
+  }
+
+  function onSubmit(ev) {
+    ev.preventDefault();
+    var v = {
+      tanggal: $('#tgl').value.trim(),
+      nama: $('#nama').value.trim(),
+      alamat: $('#alamat').value.trim(),
+      bus: parseInt($('#bus').value.replace(/\D/g, '') || '0', 10),
+      infaq: parseInt($('#infaq').value.replace(/\D/g, '') || '0', 10),
+      wa: normalizeWA($('#wa').value)
+    };
+    var ok = true;
+    ['tgl', 'nama', 'alamat', 'bus', 'infaq', 'wa'].forEach(function (k) { setErr(k, ''); });
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(v.tanggal)) { setErr('tgl', 'Tanggal kunjungan wajib diisi.'); ok = false; }
+    if (v.nama.length < 2) { setErr('nama', 'Nama wajib diisi.'); ok = false; }
+    if (v.alamat.length < 3) { setErr('alamat', 'Alamat wajib diisi.'); ok = false; }
+    if (isNaN(v.bus) || v.bus < 0 || v.bus > 999) { setErr('bus', 'Jumlah bus tidak valid.'); ok = false; }
+    if (isNaN(v.infaq) || v.infaq < 0) { setErr('infaq', 'Jumlah infaq tidak valid.'); ok = false; }
+    if (!/^628\d{7,12}$/.test(v.wa)) { setErr('wa', 'Nomor WhatsApp tidak valid. Contoh: 081234567890'); ok = false; }
+    if (!ok) { var firstBad = $('.bad'); if (firstBad) firstBad.focus(); return; }
+
+    var btn = $('#btnSubmit'), fe = $('#formErr');
+    fe.style.display = 'none';
+    btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Mengirim...';
+    api('submit', v).then(function (res) {
+      if (res && res.ok) { viewThanks(v.nama); return; }
+      throw new Error((res && res.message) || 'Gagal menyimpan data.');
+    }).catch(function (err) {
+      fe.textContent = (err && err.message ? err.message : 'Terjadi kesalahan.') + ' Silakan coba lagi.';
+      fe.style.display = 'block';
+      btn.disabled = false; btn.textContent = 'Kirim';
+    });
+  }
+
+  // ---------- View: Terima kasih + ajakan infaq ----------
+  function copyText(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(text);
+    }
+    return new Promise(function (resolve, reject) {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0';
+        root.appendChild(ta); ta.select();
+        var ok = document.execCommand('copy');
+        root.removeChild(ta);
+        ok ? resolve() : reject();
+      } catch (e) { reject(e); }
+    });
+  }
+
+  function viewThanks(nama) {
+    root.scrollTop = 0;
+    var first = String(nama || '').split(' ')[0];
+    root.innerHTML =
+      '<div class="wrap">' + brandHtml() +
+      '<div class="card thanks center">' +
+      '<div class="check"><svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>' +
+      '<h2>Terima kasih, ' + esc(first) + '</h2>' +
+      '<p>Data kunjungan Anda telah tersimpan. Terima kasih telah berkunjung ke ' + MASJID + '. Semoga Allah SWT menerima ibadah Anda dan melimpahkan keberkahan.</p>' +
+      '<div class="donate">' +
+      '<h3>Mari Berinfaq</h3>' +
+      '<p>Mari bersama memakmurkan ' + MASJID + ' dengan berinfaq melalui rekening Yayasan:</p>' +
+      '<div class="bank">' + esc(REKENING.bank) + '</div>' +
+      '<div class="rek" id="rekNo">' + esc(REKENING.nomor) + '</div>' +
+      '<div class="an">a.n. ' + esc(REKENING.nama) + '</div>' +
+      '<button class="btn" id="btnCopy" type="button">Salin Nomor Rekening</button>' +
+      '<p style="margin-top:12px;font-size:13px">Jazakumullahu khairan. Semoga menjadi amal jariyah.</p>' +
+      '</div>' +
+      '<div class="gap"></div><div class="gap"></div>' +
+      '<button class="btn ghost" id="btnAgain" type="button">Isi Buku Tamu Lagi</button>' +
+      '</div></div>';
+    $('#btnCopy').addEventListener('click', function () {
+      copyText(REKENING.nomor).then(function () { toast('Nomor rekening disalin'); }, function () { toast('Gagal menyalin. Salin manual: ' + REKENING.nomor); });
+    });
+    $('#btnAgain').addEventListener('click', viewForm);
+  }
+
+  // ---------- View: Login admin ----------
+  function viewLogin(msg) {
+    root.scrollTop = 0;
+    root.innerHTML =
+      '<div class="wrap">' + previewBanner() + brandHtml() +
+      '<div class="card"><h2>Login Admin</h2><p class="sub">Masuk untuk melihat rekap buku tamu.</p>' +
+      (msg ? '<div class="alert">' + esc(msg) + '</div>' : '') +
+      '<form id="lf" novalidate>' +
+      '<div class="field"><label for="u">Username</label><input id="u" type="text" autocomplete="username" autocapitalize="none"></div>' +
+      '<div class="field"><label for="p">Password</label><input id="p" type="password" autocomplete="current-password"></div>' +
+      '<div class="alert" id="lerr" style="display:none"></div>' +
+      '<button class="btn" id="btnLogin" type="submit">Masuk</button>' +
+      '</form></div>' +
+      '<div class="foot"><button class="linkbtn" id="back" type="button">Kembali ke Buku Tamu</button></div></div>';
+    $('#back').addEventListener('click', viewForm);
+    $('#lf').addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var u = $('#u').value.trim(), p = $('#p').value, le = $('#lerr'), btn = $('#btnLogin');
+      le.style.display = 'none';
+      if (!u || !p) { le.textContent = 'Username dan password wajib diisi.'; le.style.display = 'block'; return; }
+      btn.disabled = true; btn.innerHTML = '<span class="spin"></span> Memeriksa...';
+      api('login', { username: u, password: p }).then(function (res) {
+        if (res && res.ok && res.token) {
+          store.set('ibt_token', res.token);
+          store.set('ibt_nama', res.nama || 'Admin');
+          viewAdmin();
+        } else {
+          throw new Error((res && res.message) || 'Login gagal.');
+        }
+      }).catch(function (err) {
+        le.textContent = err && err.message ? err.message : 'Terjadi kesalahan.';
+        le.style.display = 'block';
+        btn.disabled = false; btn.textContent = 'Masuk';
+      });
+    });
+  }
+
+  // ---------- View: Dashboard admin ----------
+  var S = { guests: [], q: '', from: '', to: '' };
+
+  function filtered() {
+    var q = S.q.toLowerCase();
+    return S.guests.filter(function (g) {
+      if (S.from && g.tanggal < S.from) return false;
+      if (S.to && g.tanggal > S.to) return false;
+      if (q && (g.nama + ' ' + g.alamat + ' ' + g.wa).toLowerCase().indexOf(q) === -1) return false;
+      return true;
+    });
+  }
+
+  function logout(msg) {
+    var t = store.get('ibt_token');
+    store.del('ibt_token'); store.del('ibt_nama');
+    if (t) api('logout', { token: t }).catch(function () {});
+    msg ? viewLogin(msg) : viewForm();
+  }
+
+  function renderList() {
+    var list = filtered();
+    var tb = 0, ti = 0;
+    list.forEach(function (g) { tb += Number(g.bus) || 0; ti += Number(g.infaq) || 0; });
+    $('#stats').innerHTML =
+      '<div class="stat"><small>Total Tamu</small><b>' + list.length.toLocaleString('id-ID') + '</b></div>' +
+      '<div class="stat"><small>Total Bus</small><b>' + tb.toLocaleString('id-ID') + '</b></div>' +
+      '<div class="stat"><small>Total Infaq</small><b>' + rupiah(ti) + '</b></div>';
+    if (!list.length) { $('#list').innerHTML = '<div class="empty">Belum ada data tamu yang cocok.</div>'; return; }
+    var rows = list.map(function (g) {
+      var wa = String(g.wa || '').replace(/\D/g, '');
+      return '<tr>' +
+        '<td data-label="Tanggal">' + esc(fmtDate(g.tanggal)) + '</td>' +
+        '<td data-label="Nama"><strong>' + esc(g.nama) + '</strong></td>' +
+        '<td data-label="Alamat">' + esc(g.alamat) + '</td>' +
+        '<td data-label="Bus" class="num">' + esc(g.bus) + '</td>' +
+        '<td data-label="Infaq" class="num">' + rupiah(g.infaq) + '</td>' +
+        '<td data-label="WhatsApp"><a href="https://wa.me/' + esc(wa) + '" target="_blank" rel="noopener">+' + esc(wa) + '</a></td>' +
+        '<td class="act"><button class="btn sm danger" type="button" data-del="' + esc(g.id) + '">Hapus</button></td>' +
+        '</tr>';
+    }).join('');
+    $('#list').innerHTML =
+      '<div class="tblwrap"><table class="tbl"><thead><tr><th>Tanggal</th><th>Nama</th><th>Alamat</th><th class="num">Bus</th><th class="num">Infaq</th><th>WhatsApp</th><th></th></tr></thead><tbody>' +
+      rows + '</tbody></table></div>';
+  }
+
+  function exportCsv() {
+    var list = filtered();
+    if (!list.length) { toast('Tidak ada data untuk diekspor'); return; }
+    function cell(v) {
+      var s = String(v == null ? '' : v);
+      if (/^[=+\-@\t\r]/.test(s)) s = "'" + s;
+      return '"' + s.replace(/"/g, '""') + '"';
+    }
+    var lines = [['Tanggal Kunjungan', 'Nama', 'Alamat', 'Jumlah Bus', 'Jumlah Infaq', 'WhatsApp'].map(cell).join(',')];
+    list.forEach(function (g) {
+      lines.push([g.tanggal, g.nama, g.alamat, g.bus, g.infaq, g.wa].map(cell).join(','));
+    });
+    var blob = new Blob(['\ufeff' + lines.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(blob);
+    a.download = 'buku-tamu-' + todayStr() + '.csv';
+    root.appendChild(a); a.click(); root.removeChild(a);
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  }
+
+  function loadGuests() {
+    $('#list').innerHTML = '<div class="empty"><div class="spin"></div><div style="margin-top:10px">Memuat data...</div></div>';
+    return api('list', { token: store.get('ibt_token') }).then(function (res) {
+      if (res && res.ok) { S.guests = res.data || []; renderList(); return; }
+      if (res && res.code === 'AUTH') { logout(res.message || 'Sesi berakhir. Silakan login kembali.'); return; }
+      throw new Error((res && res.message) || 'Gagal memuat data.');
+    }).catch(function (err) {
+      $('#list').innerHTML = '<div class="empty">' + esc(err && err.message ? err.message : 'Gagal memuat data.') + '</div>';
+    });
+  }
+
+  function viewAdmin() {
+    root.scrollTop = 0;
+    S.q = ''; S.from = ''; S.to = '';
+    root.innerHTML =
+      '<div class="wrap wide">' + previewBanner() +
+      '<div class="top">' + brandHtml() +
+      '<div style="display:flex;gap:8px"><button class="btn ghost sm" id="bForm" type="button">Halaman Tamu</button><button class="btn ghost sm" id="bOut" type="button">Keluar</button></div></div>' +
+      '<div class="stats" id="stats"></div>' +
+      '<div class="toolbar">' +
+      '<div class="full"><label for="q">Cari</label><input id="q" type="search" placeholder="Nama, alamat, atau WhatsApp"></div>' +
+      '<div><label for="df">Dari tanggal</label><input id="df" type="date"></div>' +
+      '<div><label for="dt">Sampai tanggal</label><input id="dt" type="date"></div>' +
+      '<button class="btn ghost sm" id="bRef" type="button">Muat Ulang</button>' +
+      '<button class="btn sm" id="bCsv" type="button">Ekspor CSV</button>' +
+      '</div>' +
+      '<div id="list"></div></div>';
+    $('#bForm').addEventListener('click', viewForm);
+    $('#bOut').addEventListener('click', function () { logout(); });
+    $('#bRef').addEventListener('click', loadGuests);
+    $('#bCsv').addEventListener('click', exportCsv);
+    $('#q').addEventListener('input', function (e) { S.q = e.target.value.trim(); renderList(); });
+    $('#df').addEventListener('change', function (e) { S.from = e.target.value; renderList(); });
+    $('#dt').addEventListener('change', function (e) { S.to = e.target.value; renderList(); });
+    $('#list').addEventListener('click', function (e) {
+      var b = e.target.closest ? e.target.closest('[data-del]') : null;
+      if (!b) return;
+      var id = b.getAttribute('data-del');
+      if (!window.confirm('Hapus data tamu ini? Tindakan ini tidak dapat dibatalkan.')) return;
+      b.disabled = true;
+      api('delete', { token: store.get('ibt_token'), id: id }).then(function (res) {
+        if (res && res.ok) {
+          S.guests = S.guests.filter(function (g) { return g.id !== id; });
+          renderList(); toast('Data dihapus');
+        } else if (res && res.code === 'AUTH') {
+          logout(res.message || 'Sesi berakhir. Silakan login kembali.');
+        } else {
+          b.disabled = false; toast((res && res.message) || 'Gagal menghapus');
+        }
+      }).catch(function () { b.disabled = false; toast('Gagal menghubungi server'); });
+    });
+    $('#stats').innerHTML = '';
+    loadGuests();
+  }
+
+  // ---------- Mulai ----------
+  setIcons();
+  try { document.body.style.overflow = 'hidden'; } catch (e) {}
+  viewForm();
+})();
+</script>
